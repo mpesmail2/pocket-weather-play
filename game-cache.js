@@ -6,13 +6,14 @@ self.addEventListener('activate', event => event.waitUntil(self.clients.claim())
 self.addEventListener('fetch', event => {
     const url = new URL(event.request.url);
     if (event.request.method !== 'GET' || url.origin !== self.location.origin ||
-        !url.pathname.startsWith(BASE) || url.search) return;
+        !url.pathname.startsWith(BASE)) return;
     // GitHub's HTTP cache lifetime is fixed. Revalidate navigation immediately
     // so an installed worker never hides a newly published pack URL behind it.
     if (event.request.mode === 'navigate') {
         event.respondWith(fetch(new Request(event.request, {cache: 'no-store'})));
         return;
     }
+    if (url.search) return;
     const name = url.pathname.slice(BASE.length);
     const immutable = /^engine-[a-f0-9]{12}\.(wasm|js|audio\.worklet\.js|audio\.position\.worklet\.js)$/.test(name) ||
         /^game-[a-f0-9]{64}\.pck(?:\.gz)?$/.test(name);
