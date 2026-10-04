@@ -185,6 +185,26 @@ async function pwFetchPack(pack) {
 }
 
 window.pwStartGame = async function (engine, config, pack, options) {
+    // A mobile browser may discard its GPU context after backgrounding the tab.
+    // Offer a recovery at the same showcase exhibit instead of leaving a black canvas.
+    const canvas = document.querySelector('canvas');
+    if (canvas) canvas.addEventListener('webglcontextlost', event => {
+        event.preventDefault();
+        if (document.getElementById('pw-graphics-recovery')) return;
+        const panel = document.createElement('div');
+        panel.id = 'pw-graphics-recovery';
+        Object.assign(panel.style, {position:'fixed', inset:'0', zIndex:'9999', background:'#243f50',
+            color:'#fff4d6', display:'grid', placeContent:'center', gap:'18px', padding:'24px', textAlign:'center', font:'18px sans-serif'});
+        const message = document.createElement('p'); message.textContent = 'The display was interrupted. Your saved progress is safe.';
+        const button = document.createElement('button'); button.textContent = 'Resume game';
+        Object.assign(button.style, {padding:'18px', font:'bold 20px sans-serif'});
+        button.onclick = () => {
+            const url = new URL(location.href);
+            if (window.pwShowcaseIndex !== undefined) {url.searchParams.set('showcase','all'); url.searchParams.set('exhibit',window.pwShowcaseIndex+1);}
+            location.replace(url.href);
+        };
+        panel.append(message,button); document.body.append(panel);
+    });
     await pwEnableCache();
     pwMark('download-start');
     if (options.onProgress) options.onProgress(0, pack.bytes);
@@ -200,11 +220,11 @@ window.pwStartGame = async function (engine, config, pack, options) {
     return engine.start({...options, args: ['--main-pack', pack.file].concat(options.args || config.args || [])});
 };
 
-const PW_PACK_CONFIG = {"file": "game-e137a9c01e51042bd436894542351232979c52b01a412eb5f7569c435da6a171.pck", "gzip": "game-e137a9c01e51042bd436894542351232979c52b01a412eb5f7569c435da6a171.pck.gz", "sha256": "e137a9c01e51042bd436894542351232979c52b01a412eb5f7569c435da6a171", "bytes": 21331668};
+const PW_PACK_CONFIG = {"file": "game-cc60e35351091c1a64c5e7b9051be679f3c5bf6e9168989298e74574e032014b.pck", "gzip": "game-cc60e35351091c1a64c5e7b9051be679f3c5bf6e9168989298e74574e032014b.pck.gz", "sha256": "cc60e35351091c1a64c5e7b9051be679f3c5bf6e9168989298e74574e032014b", "bytes": 37245664};
 </script>
 <script src="engine-3af966e6b934.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"engine-3af966e6b934","experimentalVK":false,"fileSizes":{"game-e137a9c01e51042bd436894542351232979c52b01a412eb5f7569c435da6a171.pck":21331668,"engine-3af966e6b934.wasm":39509339},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4,"mainPack":"game-e137a9c01e51042bd436894542351232979c52b01a412eb5f7569c435da6a171.pck"};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"engine-3af966e6b934","experimentalVK":false,"fileSizes":{"game-cc60e35351091c1a64c5e7b9051be679f3c5bf6e9168989298e74574e032014b.pck":37245664,"engine-3af966e6b934.wasm":39509339},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4,"mainPack":"game-cc60e35351091c1a64c5e7b9051be679f3c5bf6e9168989298e74574e032014b.pck"};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 

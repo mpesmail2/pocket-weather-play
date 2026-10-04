@@ -29,7 +29,12 @@ self.addEventListener('fetch', event => {
         const response = await fetch(event.request);
         if (response.ok && cache) {
             const copy = response.clone();
-            event.waitUntil(cache.put(event.request, copy).catch(() => {}));
+            event.waitUntil(cache.put(event.request, copy).then(async () => {
+                // Repeated art releases must not accumulate every historical game pack on a phone.
+                const keys = await cache.keys();
+                const packs = keys.filter(key => /game-[a-f0-9]{64}\.pck(?:\.gz)?$/.test(key.url));
+                for (const old of packs.slice(0, Math.max(0, packs.length - 2))) await cache.delete(old);
+            }).catch(() => {}));
         }
         report('network');
         return response;
