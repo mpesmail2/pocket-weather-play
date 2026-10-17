@@ -1,36 +1,39 @@
 {
-  "commit": "c07949aacf482b0021fccb82ae9cf3e35e0f6940",
+  "commit": "5b150f73b00b8683eec99b43ff2bafa7d646fe78",
   "godot": "4.7.stable",
   "hosting": "github-pages",
-  "engine": "engine-3af966e6b934",
-  "pck": "game-d118b8b1fc9d02308c1bb70d2d547f74fffcb9b1174ee2eb5a34cf287ac0cb2d.pck",
-  "pck_gzip": "game-d118b8b1fc9d02308c1bb70d2d547f74fffcb9b1174ee2eb5a34cf287ac0cb2d.pck.gz",
-  "pck_sha256": "d118b8b1fc9d02308c1bb70d2d547f74fffcb9b1174ee2eb5a34cf287ac0cb2d",
+  "engine": "engine-f5152f7d6acd",
+  "engine_patches": [
+    "pw-gl-buffer-vao-reuse-v1"
+  ],
+  "pck": "game-42ddd7727a4a7f110a84aef4a5562124512600d78872cabdaef94bfddb235dad.pck",
+  "pck_gzip": "game-42ddd7727a4a7f110a84aef4a5562124512600d78872cabdaef94bfddb235dad.pck.gz",
+  "pck_sha256": "42ddd7727a4a7f110a84aef4a5562124512600d78872cabdaef94bfddb235dad",
   "status": "work in progress; campaign approval and phone timing pending",
   "assets": {
-    "engine-3af966e6b934.wasm": {
+    "engine-f5152f7d6acd.wasm": {
       "bytes": 39509339,
       "sha256": "7eda98958eb09135a1acb54a4323a00b1a55af1997f15fa1cdc2b93e3df46656"
     },
-    "engine-3af966e6b934.js": {
-      "bytes": 279815,
-      "sha256": "68586d6daafc93c6e697b3fb258976874aa7459b8931165ebb1dc3c9614cc42c"
+    "engine-f5152f7d6acd.js": {
+      "bytes": 280093,
+      "sha256": "31666c9c9333fffcbae3847e07b0896d22e8d442760c4f54c27fde551e180c02"
     },
-    "engine-3af966e6b934.audio.worklet.js": {
+    "engine-f5152f7d6acd.audio.worklet.js": {
       "bytes": 7298,
       "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
     },
-    "engine-3af966e6b934.audio.position.worklet.js": {
+    "engine-f5152f7d6acd.audio.position.worklet.js": {
       "bytes": 2973,
       "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
     },
-    "game-d118b8b1fc9d02308c1bb70d2d547f74fffcb9b1174ee2eb5a34cf287ac0cb2d.pck": {
-      "bytes": 39064872,
-      "sha256": "d118b8b1fc9d02308c1bb70d2d547f74fffcb9b1174ee2eb5a34cf287ac0cb2d"
+    "game-42ddd7727a4a7f110a84aef4a5562124512600d78872cabdaef94bfddb235dad.pck": {
+      "bytes": 65965212,
+      "sha256": "42ddd7727a4a7f110a84aef4a5562124512600d78872cabdaef94bfddb235dad"
     },
-    "game-d118b8b1fc9d02308c1bb70d2d547f74fffcb9b1174ee2eb5a34cf287ac0cb2d.pck.gz": {
-      "bytes": 34589882,
-      "sha256": "51801c348dcb7b12ca039e3b5e5026935537607dbd3b5be5b655ef498112b9bf"
+    "game-42ddd7727a4a7f110a84aef4a5562124512600d78872cabdaef94bfddb235dad.pck.gz": {
+      "bytes": 61238910,
+      "sha256": "5cb6ff2332a75fd33b4de7d00b75d59618ad76402d239910d448f8a7336578cd"
     }
   }
 }
