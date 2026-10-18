@@ -1,0 +1,1231 @@
+{
+  "commit": "bcf7720436247be88313dbd6e59970f3abc27ed6",
+  "site_url": "https://mpesmail2.github.io/pocket-weather-play/",
+  "passed": true,
+  "audio_recorded": true,
+  "ordinary_inputs_only": true,
+  "montage_normal_speed": true,
+  "environment": "Desktop Chromium with932×430touch emulation; not physical iPhone/Safari",
+  "recording_mode": "actual published game",
+  "files": {
+    "review-20s.webm": {
+      "sha256": "541660f098b71ea0046a24b82bfb5c050e461e8d0f578cd55d502ab552dd42ef",
+      "bytes": 1752767
+    },
+    "full-route.webm": {
+      "sha256": "3cc3c008d24060265022f226e1ae24c90274dd3a43d5875655759c49b0bfd2b8",
+      "bytes": 11930720
+    },
+    "poster.png": {
+      "sha256": "d3d40901e61219bebc3ccb974be6752bfbfd0502272df25e86daa5818a2b41a7",
+      "bytes": 250076
+    }
+  },
+  "browser": {
+    "executable": "/usr/bin/google-chrome",
+    "version": "155.0.8059.39",
+    "args": [
+      "--no-sandbox",
+      "--use-gl=angle",
+      "--use-angle=swiftshader",
+      "--enable-unsafe-swiftshader"
+    ],
+    "context": {
+      "viewport": {
+        "width": 932,
+        "height": 430
+      },
+      "deviceScaleFactor": 1,
+      "hasTouch": true,
+      "serviceWorkers": "allow",
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.8059.39 Safari/537.36"
+    }
+  },
+  "navigation_events": [
+    {
+      "kind": "response",
+      "url": "https://mpesmail2.github.io/pocket-weather-play/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "content_disposition": null,
+      "from_service_worker": false
+    }
+  ],
+  "boot_method": "Actual public root HTML; same-origin showcase query installed with history before any game script. No response substitution.",
+  "document_url": "https://mpesmail2.github.io/pocket-weather-play/",
+  "navigation": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "url": "https://mpesmail2.github.io/pocket-weather-play/",
+        "aborted": false,
+        "document_status": 200,
+        "document": {
+          "url": "https://mpesmail2.github.io/pocket-weather-play/",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "content_disposition": null
+        },
+        "ready": true
+      }
+    ],
+    "final_url": "https://mpesmail2.github.io/pocket-weather-play/?showcase=honey-layout-after&qa=showcase-verdict&material=D&recording=bcf7720436247be88313dbd6e59970f3abc27ed6",
+    "ready": true
+  },
+  "bootstrap": {
+    "document_url": "https://mpesmail2.github.io/pocket-weather-play/",
+    "game_url": "https://mpesmail2.github.io/pocket-weather-play/?showcase=honey-layout-after&qa=showcase-verdict&material=D&recording=bcf7720436247be88313dbd6e59970f3abc27ed6",
+    "query_installed_before_boot": true,
+    "response_substitution": false
+  },
+  "exact_published_commit_verified": true,
+  "build": {
+    "commit": "bcf7720436247be88313dbd6e59970f3abc27ed6",
+    "pck_sha256": "67e8cf4218cdf665528a19ef8e39d352fa55262a60006232b672b93d258fcc1c",
+    "engine": "engine-f5152f7d6acd"
+  },
+  "game_url": "https://mpesmail2.github.io/pocket-weather-play/?showcase=honey-layout-after&qa=showcase-verdict&material=D&recording=bcf7720436247be88313dbd6e59970f3abc27ed6",
+  "initial": {
+    "player": [
+      160,
+      709.999694824219
+    ],
+    "camera": [
+      416.071441650391,
+      680.481201171875
+    ],
+    "zoom": [
+      1.12000000476837,
+      1.12000000476837
+    ],
+    "physics": [
+      210,
+      430,
+      1300,
+      1850
+    ],
+    "persistence_enabled": false
+  },
+  "audio_start": {
+    "mime": "video/webm;codecs=vp8,opus",
+    "audioTracks": [
+      {
+        "kind": "audio",
+        "label": "MediaStreamAudioDestinationNode",
+        "readyState": "live"
+      }
+    ],
+    "outputConnections": 2
+  },
+  "audio": {
+    "method": "Real game AudioNode output duplicated to MediaStreamAudioDestinationNode, combined with live canvas capture. Original audible destination remains connected. No synthesized or silent replacement track.",
+    "nonzero_rms_samples": 25,
+    "samples": 656,
+    "maximum_peak": 0.2009735107421875,
+    "output_connections": 2
+  },
+  "route": {
+    "all_hazards_enabled": true,
+    "at": [
+      3477.5400390625,
+      293.925262451172
+    ],
+    "bridge": true,
+    "cargo_clearance_violations": 0,
+    "cargo_overlap_examples": [],
+    "comparison_after": true,
+    "complete": true,
+    "falls": 0,
+    "flowers": [
+      true,
+      true,
+      true
+    ],
+    "milestones": [
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 0,
+        "step": 0,
+        "x": 160,
+        "y": 709.999694824219
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 1.8,
+        "step": 1,
+        "x": 520.149963378906,
+        "y": 709.925170898438
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 6.88333333333331,
+        "step": 2,
+        "x": 1581.17004394531,
+        "y": 709.925109863281
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 7.44999999999998,
+        "step": 3,
+        "x": 1697.83666992188,
+        "y": 773.925231933594
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 8.34999999999999,
+        "step": 4,
+        "x": 1766.61486816406,
+        "y": 657.994262695312
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 8.85000000000002,
+        "step": 5,
+        "x": 1830.89282226562,
+        "y": 605.992309570312
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 9.63333333333339,
+        "step": 6,
+        "x": 1752.22607421875,
+        "y": 553.925170898438
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 10.7666666666668,
+        "step": 7,
+        "x": 1594.62976074219,
+        "y": 501.925109863281
+      },
+      {
+        "carrying": false,
+        "mode": "flower1",
+        "seconds": 18.0500000000003,
+        "step": 8,
+        "x": 149.461730957031,
+        "y": 501.925231933594
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 22.8,
+        "step": 9,
+        "x": 1100.85192871094,
+        "y": 501.925231933594
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 23.8333333333333,
+        "step": 10,
+        "x": 1156.85229492188,
+        "y": 415.979827880859
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 24.4333333333332,
+        "step": 11,
+        "x": 1083.24096679688,
+        "y": 397.925231933594
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 25.4499999999998,
+        "step": 12,
+        "x": 1107.92529296875,
+        "y": 311.979736328125
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 26.0499999999998,
+        "step": 13,
+        "x": 1175.59191894531,
+        "y": 293.924041748047
+      },
+      {
+        "carrying": false,
+        "mode": "see_roof_gate",
+        "seconds": 27.0166666666664,
+        "step": 14,
+        "x": 976.92529296875,
+        "y": 293.925201416016
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 40.6666666666656,
+        "step": 15,
+        "x": 3580.8173828125,
+        "y": 293.925262451172
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 41.4333333333323,
+        "step": 16,
+        "x": 3699.92602539062,
+        "y": 397.972534179688
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 41.9833333333322,
+        "step": 17,
+        "x": 3608.9267578125,
+        "y": 501.925262451172
+      },
+      {
+        "carrying": false,
+        "mode": "see_garden_gate",
+        "seconds": 42.0833333333322,
+        "step": 18,
+        "x": 3596.09326171875,
+        "y": 501.925231933594
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 42.9499999999988,
+        "step": 19,
+        "x": 3699.92504882812,
+        "y": 605.961120605469
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 43.4999999999988,
+        "step": 20,
+        "x": 3597.25903320312,
+        "y": 709.925231933594
+      },
+      {
+        "carrying": true,
+        "mode": "pickup",
+        "seconds": 52.8333333333316,
+        "step": 21,
+        "x": 2082.42236328125,
+        "y": 709.925231933594
+      },
+      {
+        "carrying": true,
+        "mode": "walk",
+        "seconds": 53.7499999999982,
+        "step": 22,
+        "x": 1930.08923339844,
+        "y": 761.972595214844
+      },
+      {
+        "carrying": true,
+        "mode": "walk",
+        "seconds": 54.8166666666648,
+        "step": 23,
+        "x": 1716.58911132812,
+        "y": 773.92529296875
+      },
+      {
+        "carrying": true,
+        "mode": "walk",
+        "seconds": 55.3499999999981,
+        "step": 24,
+        "x": 1604.58862304688,
+        "y": 709.925231933594
+      },
+      {
+        "carrying": false,
+        "mode": "plate1",
+        "seconds": 61.7999999999978,
+        "step": 25,
+        "x": 276.574737548828,
+        "y": 696.646545410156
+      },
+      {
+        "carrying": true,
+        "mode": "repick",
+        "seconds": 62.4499999999977,
+        "step": 26,
+        "x": 276.574737548828,
+        "y": 709.925231933594
+      },
+      {
+        "carrying": true,
+        "mode": "walk",
+        "seconds": 63.9499999999977,
+        "step": 27,
+        "x": 516.925231933594,
+        "y": 709.993957519531
+      },
+      {
+        "carrying": true,
+        "mode": "collapse",
+        "seconds": 66.1333333333309,
+        "step": 28,
+        "x": 942.41796875,
+        "y": 709.92529296875
+      },
+      {
+        "carrying": true,
+        "mode": "drop",
+        "seconds": 66.4666666666642,
+        "step": 29,
+        "x": 1012.41796875,
+        "y": 805.925170898438
+      },
+      {
+        "carrying": true,
+        "mode": "rise",
+        "seconds": 66.9166666666642,
+        "step": 30,
+        "x": 1012.02954101562,
+        "y": 702.827087402344
+      },
+      {
+        "carrying": true,
+        "mode": "walk",
+        "seconds": 67.4166666666641,
+        "step": 31,
+        "x": 1099.52954101562,
+        "y": 709.924011230469
+      },
+      {
+        "carrying": true,
+        "mode": "drop",
+        "seconds": 68.5166666666641,
+        "step": 32,
+        "x": 1271.05541992188,
+        "y": 805.925170898438
+      },
+      {
+        "carrying": false,
+        "mode": "plate2",
+        "seconds": 72.9666666666638,
+        "step": 33,
+        "x": 2083.92529296875,
+        "y": 917.92529296875
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 80.1999999999967,
+        "step": 34,
+        "x": 3595.2607421875,
+        "y": 917.925231933594
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 81.2166666666633,
+        "step": 35,
+        "x": 3668.76098632812,
+        "y": 829.995300292969
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 81.6999999999966,
+        "step": 36,
+        "x": 3699.92504882812,
+        "y": 773.994750976562
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 82.13333333333,
+        "step": 37,
+        "x": 3671.07470703125,
+        "y": 709.925170898438
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 82.6333333333299,
+        "step": 38,
+        "x": 3658.79028320312,
+        "y": 657.989868164062
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 83.1333333333299,
+        "step": 39,
+        "x": 3699.92529296875,
+        "y": 605.992309570312
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 83.6333333333299,
+        "step": 40,
+        "x": 3660.07495117188,
+        "y": 553.992309570312
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 84.1333333333298,
+        "step": 41,
+        "x": 3611.4638671875,
+        "y": 501.925201416016
+      },
+      {
+        "carrying": false,
+        "mode": "flower2",
+        "seconds": 85.8499999999964,
+        "step": 42,
+        "x": 3252.63012695312,
+        "y": 501.924041748047
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 87.866666666663,
+        "step": 43,
+        "x": 3609.24145507812,
+        "y": 501.925109863281
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 88.5333333333296,
+        "step": 44,
+        "x": 3699.92529296875,
+        "y": 605.985717773438
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 97.3333333333291,
+        "step": 45,
+        "x": 2002.5341796875,
+        "y": 709.925231933594
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 98.6999999999957,
+        "step": 46,
+        "x": 1715.5341796875,
+        "y": 773.92529296875
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 99.5999999999956,
+        "step": 47,
+        "x": 1764.70043945312,
+        "y": 657.994323730469
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 100.099999999996,
+        "step": 48,
+        "x": 1831.70068359375,
+        "y": 605.925231933594
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 103.249999999995,
+        "step": 49,
+        "x": 1752.75610351562,
+        "y": 553.925231933594
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 106.533333333329,
+        "step": 50,
+        "x": 1141.57861328125,
+        "y": 501.925231933594
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 107.566666666662,
+        "step": 51,
+        "x": 1157.91162109375,
+        "y": 415.979736328125
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 108.166666666662,
+        "step": 52,
+        "x": 1082.74487304688,
+        "y": 397.925231933594
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 109.183333333328,
+        "step": 53,
+        "x": 1107.92529296875,
+        "y": 311.979675292969
+      },
+      {
+        "carrying": false,
+        "mode": "walk",
+        "seconds": 109.783333333328,
+        "step": 54,
+        "x": 1175.59191894531,
+        "y": 293.924041748047
+      },
+      {
+        "carrying": false,
+        "mode": "flower3",
+        "seconds": 114.549999999995,
+        "step": 55,
+        "x": 179.535049438477,
+        "y": 293.925262451172
+      }
+    ],
+    "ordinary_inputs_only": true,
+    "pass": true,
+    "plates": [
+      true,
+      true
+    ],
+    "pocket_tour": false,
+    "seconds": 130.816666666663,
+    "seed": false,
+    "seed_detour_started": -1,
+    "seed_fraction": -0.00764428589629274,
+    "seed_pickup_seconds": -1,
+    "seed_requested": false,
+    "seed_support": {},
+    "source_count": 16,
+    "source_encounter_method": "body centre or drawn crusher impact mark; maximum200px; real solid-mask1 line of sight",
+    "source_visible_distances": {
+      "BridgeAcorn": 13.4326591491699,
+      "CanalBeetle": 45.0849151611328,
+      "ClerkBeetle": 34.9102478027344,
+      "DockMail": 1.9400417804718,
+      "EavesBee": 21.9293842315674,
+      "FarBankMail": 1.98072695732117,
+      "FirstPress": 4.92857885360718,
+      "FoundationPress": 27.0796737670898,
+      "ReceivingHopper": 33.1877098083496,
+      "ReturnBee": 21.9647464752197,
+      "RoofAcorn": 12.0675411224365,
+      "RoofHopper": 37.1849594116211,
+      "RootHopper": 38.6863403320312,
+      "StoreMail": 40.9159927368164,
+      "StorePress": 1.92665505409241,
+      "UnderbridgeMail": 2.59456562995911
+    },
+    "status": "finished",
+    "step": 56,
+    "support_visits": {
+      "AfterInspectionBankEast": {
+        "carrying": false,
+        "position": [
+          717.038696289062,
+          709.925109863281
+        ],
+        "seconds": 2.76666666666666
+      },
+      "AfterInspectionBankWestEast": {
+        "carrying": false,
+        "position": [
+          566.538696289062,
+          709.924011230469
+        ],
+        "seconds": 2.05
+      },
+      "BrokenAbutmentTread": {
+        "carrying": true,
+        "position": [
+          1271.05541992188,
+          805.925170898438
+        ],
+        "seconds": 68.5166666666641
+      },
+      "CarrierAscentOne": {
+        "carrying": false,
+        "position": [
+          1766.61486816406,
+          657.994262695312
+        ],
+        "seconds": 8.34999999999999
+      },
+      "CarrierAscentThree": {
+        "carrying": false,
+        "position": [
+          1752.22607421875,
+          553.925170898438
+        ],
+        "seconds": 9.63333333333339
+      },
+      "CarrierAscentTwo": {
+        "carrying": false,
+        "position": [
+          1830.89282226562,
+          605.992309570312
+        ],
+        "seconds": 8.85000000000002
+      },
+      "CarrierHeadroom_1408": {
+        "carrying": false,
+        "position": [
+          1396.05859375,
+          709.925231933594
+        ],
+        "seconds": 5.99999999999998
+      },
+      "CarrierHeadroom_224": {
+        "carrying": false,
+        "position": [
+          212.5,
+          709.925231933594
+        ],
+        "seconds": 0.283333333333333
+      },
+      "CarrierHeadroom_2400": {
+        "carrying": false,
+        "position": [
+          2481.42260742188,
+          709.925231933594
+        ],
+        "seconds": 50.9333333333317
+      },
+      "CarrierHeadroom_2720": {
+        "carrying": false,
+        "position": [
+          2800.4228515625,
+          709.92529296875
+        ],
+        "seconds": 48.7833333333318
+      },
+      "CarrierHeadroom_480": {
+        "carrying": false,
+        "position": [
+          520.149963378906,
+          709.925170898438
+        ],
+        "seconds": 1.8
+      },
+      "CarrierHeadroom_864": {
+        "carrying": false,
+        "position": [
+          878.038635253906,
+          709.924011230469
+        ],
+        "seconds": 3.53333333333333
+      },
+      "CarrierRecessEastShoulder": {
+        "carrying": true,
+        "position": [
+          1930.08923339844,
+          761.972595214844
+        ],
+        "seconds": 53.7499999999982
+      },
+      "CarrierRecessUnderpass": {
+        "carrying": false,
+        "position": [
+          1697.83666992188,
+          773.925231933594
+        ],
+        "seconds": 7.44999999999998
+      },
+      "CarrierRecess_608": {
+        "carrying": true,
+        "position": [
+          670.92529296875,
+          761.925231933594
+        ],
+        "seconds": 64.7333333333309
+      },
+      "CrownMasonryBed2080": {
+        "carrying": false,
+        "position": [
+          2153.42602539062,
+          261.925231933594
+        ],
+        "seconds": 33.866666666666
+      },
+      "CrownMasonryBed2976": {
+        "carrying": false,
+        "position": [
+          3052.31689453125,
+          261.925231933594
+        ],
+        "seconds": 38.1499999999991
+      },
+      "CrownMasonryBed320": {
+        "carrying": false,
+        "position": [
+          309.035034179688,
+          261.925231933594
+        ],
+        "seconds": 113.933333333328
+      },
+      "CrownMasonryBed3296": {
+        "carrying": false,
+        "position": [
+          3370.8173828125,
+          261.925231933594
+        ],
+        "seconds": 39.6666666666657
+      },
+      "CrownMasonryBed704": {
+        "carrying": false,
+        "position": [
+          693.424865722656,
+          261.925231933594
+        ],
+        "seconds": 112.099999999995
+      },
+      "EastBridgeRecoveryFoot": {
+        "carrying": true,
+        "position": [
+          1337.81433105469,
+          861.925170898438
+        ],
+        "seconds": 69.316666666664
+      },
+      "EastCarrierRecovery": {
+        "carrying": false,
+        "position": [
+          3658.79028320312,
+          657.989868164062
+        ],
+        "seconds": 82.6333333333299
+      },
+      "EastCarrierRoadEastEastEastEastEast": {
+        "carrying": false,
+        "position": [
+          3597.25903320312,
+          709.925231933594
+        ],
+        "seconds": 43.4999999999988
+      },
+      "EastCarrierRoadEastEastEastEastWest": {
+        "carrying": false,
+        "position": [
+          3440.59155273438,
+          709.925109863281
+        ],
+        "seconds": 44.2499999999988
+      },
+      "EastCarrierRoadEastEastEastWestEastEast": {
+        "carrying": false,
+        "position": [
+          3153.5908203125,
+          709.925109863281
+        ],
+        "seconds": 45.6166666666654
+      },
+      "EastCarrierRoadEastEastEastWestEastWest": {
+        "carrying": false,
+        "position": [
+          2677.42260742188,
+          709.925109863281
+        ],
+        "seconds": 49.9999999999984
+      },
+      "EastCarrierRoadEastEastEastWestWest": {
+        "carrying": false,
+        "position": [
+          2407.92260742188,
+          709.924011230469
+        ],
+        "seconds": 51.2833333333317
+      },
+      "EastCarrierRoadEastEastWestEast": {
+        "carrying": false,
+        "position": [
+          2257.42236328125,
+          709.925109863281
+        ],
+        "seconds": 51.9999999999983
+      },
+      "EastCarrierRoadEastWestWestWest": {
+        "carrying": false,
+        "position": [
+          1581.17004394531,
+          709.925109863281
+        ],
+        "seconds": 6.88333333333331
+      },
+      "EastCarrierRoadWestWest": {
+        "carrying": false,
+        "position": [
+          1357.55859375,
+          709.924011230469
+        ],
+        "seconds": 5.81666666666665
+      },
+      "EastFoundationRecovery": {
+        "carrying": false,
+        "position": [
+          3699.92504882812,
+          773.994750976562
+        ],
+        "seconds": 81.6999999999966
+      },
+      "EastFoundationStep": {
+        "carrying": false,
+        "position": [
+          3668.76098632812,
+          829.995300292969
+        ],
+        "seconds": 81.2166666666633
+      },
+      "EastGalleryRecovery": {
+        "carrying": false,
+        "position": [
+          3660.07495117188,
+          553.992309570312
+        ],
+        "seconds": 83.6333333333299
+      },
+      "EastGalleryStep": {
+        "carrying": false,
+        "position": [
+          3699.92504882812,
+          605.961120605469
+        ],
+        "seconds": 42.9499999999988
+      },
+      "EastRoofRecovery": {
+        "carrying": false,
+        "position": [
+          3678.8173828125,
+          345.925262451172
+        ],
+        "seconds": 41.1333333333323
+      },
+      "EastRoofStep": {
+        "carrying": false,
+        "position": [
+          3699.92602539062,
+          397.972534179688
+        ],
+        "seconds": 41.4333333333323
+      },
+      "FoundationFloorEastEastEastEastEastEastEast": {
+        "carrying": false,
+        "position": [
+          2829.4267578125,
+          917.925170898438
+        ],
+        "seconds": 76.5166666666636
+      },
+      "FoundationFloorEastEastEastEastEastEastWest": {
+        "carrying": false,
+        "position": [
+          2510.92602539062,
+          917.925109863281
+        ],
+        "seconds": 74.999999999997
+      },
+      "FoundationFloorEastEastEastEastEastWestEast": {
+        "carrying": true,
+        "position": [
+          2024.42529296875,
+          917.925231933594
+        ],
+        "seconds": 72.6833333333305
+      },
+      "FoundationFloorEastEastEastEastWestWest": {
+        "carrying": true,
+        "position": [
+          1544.037109375,
+          917.925109863281
+        ],
+        "seconds": 70.2999999999973
+      },
+      "FoundationFloorEastEastEastWest": {
+        "carrying": true,
+        "position": [
+          1411.03662109375,
+          917.925109863281
+        ],
+        "seconds": 69.666666666664
+      },
+      "FoundationRecessUnderpass": {
+        "carrying": true,
+        "position": [
+          1714.53771972656,
+          969.92529296875
+        ],
+        "seconds": 71.1166666666639
+      },
+      "GalleryEastVentRim": {
+        "carrying": false,
+        "position": [
+          1687.57470703125,
+          501.925170898438
+        ],
+        "seconds": 10.1333333333334
+      },
+      "GalleryHeadroom_1472": {
+        "carrying": false,
+        "position": [
+          1554.62976074219,
+          501.924011230469
+        ],
+        "seconds": 11.0500000000001
+      },
+      "GalleryHeadroom_3168": {
+        "carrying": false,
+        "position": [
+          3249.63012695312,
+          501.925262451172
+        ],
+        "seconds": 85.8666666666631
+      },
+      "GalleryHeadroom_3456": {
+        "carrying": false,
+        "position": [
+          3445.1298828125,
+          501.925262451172
+        ],
+        "seconds": 86.9833333333297
+      },
+      "GalleryHeadroom_608": {
+        "carrying": false,
+        "position": [
+          715.128845214844,
+          501.924041748047
+        ],
+        "seconds": 15.0833333333337
+      },
+      "GalleryMasonryBed1280": {
+        "carrying": false,
+        "position": [
+          1267.62927246094,
+          469.925231933594
+        ],
+        "seconds": 12.4166666666669
+      },
+      "GalleryMasonryBed352": {
+        "carrying": false,
+        "position": [
+          341.961730957031,
+          469.925231933594
+        ],
+        "seconds": 17.1333333333336
+      },
+      "GalleryMasonryBed864": {
+        "carrying": false,
+        "position": [
+          854.628845214844,
+          469.925231933594
+        ],
+        "seconds": 14.3833333333336
+      },
+      "GalleryWestEastEast": {
+        "carrying": false,
+        "position": [
+          1594.62976074219,
+          501.925109863281
+        ],
+        "seconds": 10.7666666666668
+      },
+      "GalleryWestEastWest": {
+        "carrying": false,
+        "position": [
+          1481.12976074219,
+          501.924041748047
+        ],
+        "seconds": 11.4000000000001
+      },
+      "GalleryWestWest": {
+        "carrying": false,
+        "position": [
+          593.962158203125,
+          501.925109863281
+        ],
+        "seconds": 15.9333333333337
+      },
+      "GardenFloorEastWest": {
+        "carrying": false,
+        "position": [
+          3441.63012695312,
+          501.925109863281
+        ],
+        "seconds": 84.9499999999965
+      },
+      "GardenPorch": {
+        "carrying": false,
+        "position": [
+          3608.9267578125,
+          501.925262451172
+        ],
+        "seconds": 41.9833333333322
+      },
+      "InspectionPlank": {
+        "carrying": false,
+        "position": [
+          342.022155761719,
+          709.925231933594
+        ],
+        "seconds": 0.900000000000001
+      },
+      "MainOverloadBridge": {
+        "carrying": false,
+        "position": [
+          885.038635253906,
+          709.925231933594
+        ],
+        "seconds": 3.56666666666666
+      },
+      "ReceivingAbutmentWest": {
+        "carrying": false,
+        "position": [
+          724.038635253906,
+          709.925231933594
+        ],
+        "seconds": 2.79999999999999
+      },
+      "RoofAscentOne": {
+        "carrying": false,
+        "position": [
+          1156.85229492188,
+          415.979827880859
+        ],
+        "seconds": 23.8333333333333
+      },
+      "RoofAscentThree": {
+        "carrying": false,
+        "position": [
+          1107.92529296875,
+          311.979736328125
+        ],
+        "seconds": 25.4499999999998
+      },
+      "RoofAscentTwo": {
+        "carrying": false,
+        "position": [
+          1083.24096679688,
+          397.925231933594
+        ],
+        "seconds": 24.4333333333332
+      },
+      "RoofEastOfStairs": {
+        "carrying": false,
+        "position": [
+          1175.59191894531,
+          293.924041748047
+        ],
+        "seconds": 26.0499999999998
+      },
+      "RoofPastBridgeAcorn": {
+        "carrying": false,
+        "position": [
+          1753.92529296875,
+          293.925201416016
+        ],
+        "seconds": 31.5833333333328
+      },
+      "RoofPastStoreAcorn": {
+        "carrying": false,
+        "position": [
+          2503.4267578125,
+          293.925140380859
+        ],
+        "seconds": 35.5333333333326
+      },
+      "RoofStairLip": {
+        "carrying": false,
+        "position": [
+          1171.75866699219,
+          293.924041748047
+        ],
+        "seconds": 26.0833333333331
+      },
+      "RoofWestRoom": {
+        "carrying": false,
+        "position": [
+          976.92529296875,
+          293.925201416016
+        ],
+        "seconds": 27.0166666666664
+      },
+      "SecretWestAbutmentTread": {
+        "carrying": true,
+        "position": [
+          1012.41796875,
+          805.925170898438
+        ],
+        "seconds": 66.4666666666642
+      },
+      "SeedEntryBaffle": {
+        "carrying": true,
+        "position": [
+          1258.08825683594,
+          709.92529296875
+        ],
+        "seconds": 56.999999999998
+      },
+      "SeedRoof": {
+        "carrying": false,
+        "position": [
+          1193.03845214844,
+          709.924011230469
+        ],
+        "seconds": 5.03333333333332
+      },
+      "SeedWestWall": {
+        "carrying": true,
+        "position": [
+          1097.08837890625,
+          709.923950195312
+        ],
+        "seconds": 57.7666666666647
+      },
+      "WestCarrierBankEast": {
+        "carrying": false,
+        "position": [
+          310.5,
+          709.924011230469
+        ],
+        "seconds": 0.750000000000001
+      },
+      "WestCarrierBankWest": {
+        "carrying": false,
+        "position": [
+          160,
+          709.999694824219
+        ],
+        "seconds": 0
+      }
+    }
+  },
+  "full_route_elapsed": 130.816666666663,
+  "runtime_errors": [],
+  "maximum_non_poff_voices": 3,
+  "montage_duration": 20.007,
+  "recording_duration": 215.697,
+  "clips": [
+    {
+      "name": "West",
+      "start": 1,
+      "seconds": 6
+    },
+    {
+      "name": "Middle / parcel crossing",
+      "start": 91.277,
+      "seconds": 7
+    },
+    {
+      "name": "East / departure",
+      "start": 208.697,
+      "seconds": 7
+    }
+  ]
+}
