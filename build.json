@@ -6,9 +6,9 @@
   "engine_patches": [
     "pw-gl-buffer-vao-reuse-v1"
   ],
-  "pck": "game-fefce5615b164bd304a2e6f5e486272a5fef8c890c485435e86c9a66f6b5e0aa.pck",
-  "pck_gzip": "game-fefce5615b164bd304a2e6f5e486272a5fef8c890c485435e86c9a66f6b5e0aa.pck.gz",
-  "pck_sha256": "fefce5615b164bd304a2e6f5e486272a5fef8c890c485435e86c9a66f6b5e0aa",
+  "pck": "game-a8654bd719d3ecb8fd8a784082e3c5889d8e3e80802b42edc85c60c09369f501.pck",
+  "pck_gzip": "game-a8654bd719d3ecb8fd8a784082e3c5889d8e3e80802b42edc85c60c09369f501.pck.gz",
+  "pck_sha256": "a8654bd719d3ecb8fd8a784082e3c5889d8e3e80802b42edc85c60c09369f501",
   "status": "work in progress; campaign approval and phone timing pending",
   "assets": {
     "engine-f5152f7d6acd.wasm": {
@@ -27,13 +27,13 @@
       "bytes": 2973,
       "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
     },
-    "game-fefce5615b164bd304a2e6f5e486272a5fef8c890c485435e86c9a66f6b5e0aa.pck": {
+    "game-a8654bd719d3ecb8fd8a784082e3c5889d8e3e80802b42edc85c60c09369f501.pck": {
       "bytes": 88778444,
-      "sha256": "fefce5615b164bd304a2e6f5e486272a5fef8c890c485435e86c9a66f6b5e0aa"
+      "sha256": "a8654bd719d3ecb8fd8a784082e3c5889d8e3e80802b42edc85c60c09369f501"
     },
-    "game-fefce5615b164bd304a2e6f5e486272a5fef8c890c485435e86c9a66f6b5e0aa.pck.gz": {
-      "bytes": 83443879,
-      "sha256": "ea66f9aac8dcdd0266ea5f89943514739ab619c39636823ef4b71d8037395038"
+    "game-a8654bd719d3ecb8fd8a784082e3c5889d8e3e80802b42edc85c60c09369f501.pck.gz": {
+      "bytes": 83443865,
+      "sha256": "f0fce699d8e45ea2f13ce5722d94ef3fc509601f4cf00386fd45b35f9d20872c"
     }
   }
 }
