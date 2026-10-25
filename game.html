@@ -38,7 +38,7 @@ body {
 }
 
 #status {
-	background-color: #242424;
+	background-color: #8ecae6;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -104,7 +104,7 @@ body {
 		</noscript>
 
 		<div id="status">
-			<img id="status-splash" class="show-image--true fullsize--true use-filter--true" src="game.png" alt="">
+			<img id="status-splash" class="show-image--true fullsize--false use-filter--true" src="game.png" alt="">
 			<progress id="status-progress"></progress>
 			<div id="status-notice"></div>
 		</div>
@@ -220,11 +220,11 @@ window.pwStartGame = async function (engine, config, pack, options) {
     return engine.start({...options, args: ['--main-pack', pack.file].concat(options.args || config.args || [])});
 };
 
-const PW_PACK_CONFIG = {"file": "game-68422edc5af093fc38cc5dafb42330b3124658b881a15ab84fea148cce698dc9.pck", "gzip": "game-68422edc5af093fc38cc5dafb42330b3124658b881a15ab84fea148cce698dc9.pck.gz", "sha256": "68422edc5af093fc38cc5dafb42330b3124658b881a15ab84fea148cce698dc9", "bytes": 84244960};
+const PW_PACK_CONFIG = {"file": "game-4f37909bc7fdb30393a87bf761289a7fdab04bec26ba8f5c3aece4537fad3d96.pck", "gzip": "game-4f37909bc7fdb30393a87bf761289a7fdab04bec26ba8f5c3aece4537fad3d96.pck.gz", "sha256": "4f37909bc7fdb30393a87bf761289a7fdab04bec26ba8f5c3aece4537fad3d96", "bytes": 84398744};
 </script>
 <script src="engine-f5152f7d6acd.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"engine-f5152f7d6acd","experimentalVK":false,"fileSizes":{"game-68422edc5af093fc38cc5dafb42330b3124658b881a15ab84fea148cce698dc9.pck":84244960,"engine-f5152f7d6acd.wasm":39509339},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4,"mainPack":"game-68422edc5af093fc38cc5dafb42330b3124658b881a15ab84fea148cce698dc9.pck"};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"engine-f5152f7d6acd","experimentalVK":false,"fileSizes":{"game-4f37909bc7fdb30393a87bf761289a7fdab04bec26ba8f5c3aece4537fad3d96.pck":84398744,"engine-f5152f7d6acd.wasm":39509339},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4,"mainPack":"game-4f37909bc7fdb30393a87bf761289a7fdab04bec26ba8f5c3aece4537fad3d96.pck"};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
