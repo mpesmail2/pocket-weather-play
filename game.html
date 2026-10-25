@@ -92,7 +92,7 @@ body {
 		</style>
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="game.icon.png" />
 <link rel="apple-touch-icon" href="game.apple-touch-icon.png"/>
-<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes"><script>/* [Claude] Job 23: landscape lock. Lock where the browser allows it; elsewhere a portrait phone is asked to turn. */addEventListener('pointerdown',function(){try{screen.orientation.lock('landscape').catch(function(){})}catch(e){}},{once:true});document.addEventListener('DOMContentLoaded',function(){var d=document.createElement('div');d.id='pw-turn';d.textContent='Turn your phone sideways to play';d.style.cssText='display:none;position:fixed;inset:0;z-index:9;align-items:center;justify-content:center;background:#8ecae6;color:#233e53;font:600 20px sans-serif';document.body.appendChild(d)})</script><style>@media (orientation:portrait) and (max-width:900px){#pw-turn{display:flex!important}}</style>
 	</head>
 	<body>
 		<canvas id="canvas">
@@ -220,11 +220,11 @@ window.pwStartGame = async function (engine, config, pack, options) {
     return engine.start({...options, args: ['--main-pack', pack.file].concat(options.args || config.args || [])});
 };
 
-const PW_PACK_CONFIG = {"file": "game-33cb52ea2500a5615c76c90cf95d098424779800d62e97ad0bfb6522d10886ae.pck", "gzip": "game-33cb52ea2500a5615c76c90cf95d098424779800d62e97ad0bfb6522d10886ae.pck.gz", "sha256": "33cb52ea2500a5615c76c90cf95d098424779800d62e97ad0bfb6522d10886ae", "bytes": 83968116};
+const PW_PACK_CONFIG = {"file": "game-f701929f91be64f7a44a8b7127bd7f938793264fb475761699e017d0787ab816.pck", "gzip": "game-f701929f91be64f7a44a8b7127bd7f938793264fb475761699e017d0787ab816.pck.gz", "sha256": "f701929f91be64f7a44a8b7127bd7f938793264fb475761699e017d0787ab816", "bytes": 84217064};
 </script>
 <script src="engine-f5152f7d6acd.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"engine-f5152f7d6acd","experimentalVK":false,"fileSizes":{"game-33cb52ea2500a5615c76c90cf95d098424779800d62e97ad0bfb6522d10886ae.pck":83968116,"engine-f5152f7d6acd.wasm":39509339},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4,"mainPack":"game-33cb52ea2500a5615c76c90cf95d098424779800d62e97ad0bfb6522d10886ae.pck"};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"engine-f5152f7d6acd","experimentalVK":false,"fileSizes":{"game-f701929f91be64f7a44a8b7127bd7f938793264fb475761699e017d0787ab816.pck":84217064,"engine-f5152f7d6acd.wasm":39509339},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4,"mainPack":"game-f701929f91be64f7a44a8b7127bd7f938793264fb475761699e017d0787ab816.pck"};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
