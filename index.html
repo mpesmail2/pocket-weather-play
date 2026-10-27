@@ -166,22 +166,87 @@ async function pwCheckPack(buffer, pack) {
     return buffer;
 }
 
-async function pwFetchPack(pack) {
+function pwLoadingMessage(text) {
+    const status = document.getElementById('status');
+    if (!status) return;
+    let message = document.getElementById('pw-loading-message');
+    if (!message) {
+        message = document.createElement('div');
+        message.id = 'pw-loading-message';
+        message.setAttribute('role', 'status');
+        Object.assign(message.style, {position: 'absolute', bottom: '14%', padding: '6px 12px',
+            color: '#233e53', background: '#8ecae6ee', borderRadius: '8px',
+            font: '600 16px sans-serif', textAlign: 'center'});
+        status.append(message);
+    }
+    message.hidden = !text;
+    if (message.textContent !== text) message.textContent = text;
+}
+
+async function pwReadPack(response, pack, compressed, onProgress) {
+    // Count bytes as they arrive, before optional decompression. Content-Length
+    // describes the encoded body; Fetch has already decoded Content-Encoding.
+    const encoded = response.headers.get('Content-Encoding') || '';
+    const total = encoded ? 0 : Number(response.headers.get('Content-Length')) || 0;
+    let current = 0;
+    onProgress(0, total);
+    const source = response.body.getReader();
+    let stream = new ReadableStream({
+        async pull(controller) {
+            try {
+                const next = await source.read();
+                if (next.done) {
+                    source.releaseLock();
+                    controller.close();
+                } else {
+                    current += next.value.byteLength;
+                    onProgress(current, total);
+                    controller.enqueue(next.value);
+                }
+            } catch (error) { controller.error(error); }
+        },
+        cancel(reason) { return source.cancel(reason); },
+    });
+    // Fetch already decodes Content-Encoding if another static host adds it.
+    if (compressed && !/gzip/i.test(encoded)) stream = stream.pipeThrough(new DecompressionStream('gzip'));
+    const reader = stream.getReader();
+    // Allocate exactly once: accumulating chunks and then joining them would
+    // temporarily double the large pack's memory use on phones.
+    const bytes = new Uint8Array(pack.bytes);
+    let offset = 0;
+    try {
+        while (true) {
+            const next = await reader.read();
+            if (next.done) break;
+            if (offset + next.value.byteLength > bytes.length) {
+                await reader.cancel('Game file exceeds its expected size');
+                throw new Error('The downloaded game file is larger than expected. Please reload.');
+            }
+            bytes.set(next.value, offset);
+            offset += next.value.byteLength;
+        }
+    } finally { reader.releaseLock(); }
+    if (offset !== pack.bytes) throw new Error('The downloaded game file is incomplete. Please reload to try again.');
+    return bytes.buffer;
+}
+
+async function pwFetchPack(pack, onProgress = () => {}, onPreparing = () => {}) {
     if (typeof DecompressionStream === 'function') {
         try {
             const response = await fetch(pack.gzip);
             if (!response.ok) throw new Error('Compressed game download returned HTTP ' + response.status);
-            // Fetch already decodes Content-Encoding if a different static host adds it.
-            const stream = /gzip/i.test(response.headers.get('Content-Encoding') || '')
-                ? response.body : response.body.pipeThrough(new DecompressionStream('gzip'));
-            return await pwCheckPack(await new Response(stream).arrayBuffer(), pack);
+            const buffer = await pwReadPack(response, pack, true, onProgress);
+            onPreparing();
+            return await pwCheckPack(buffer, pack);
         } catch (error) {
             console.warn('Compressed game unavailable; loading the compatible game file.', error.message);
         }
     }
     const response = await fetch(pack.file);
     if (!response.ok) throw new Error('Game download returned HTTP ' + response.status + '. Please reload to try again.');
-    return pwCheckPack(await response.arrayBuffer(), pack);
+    const buffer = await pwReadPack(response, pack, false, onProgress);
+    onPreparing();
+    return pwCheckPack(buffer, pack);
 }
 
 window.pwStartGame = async function (engine, config, pack, options) {
@@ -205,26 +270,40 @@ window.pwStartGame = async function (engine, config, pack, options) {
         };
         panel.append(message,button); document.body.append(panel);
     });
+    pwLoadingMessage('Loading game…');
     await pwEnableCache();
     pwMark('download-start');
-    if (options.onProgress) options.onProgress(0, pack.bytes);
-    await Promise.all([
-        engine.init(config.executable),
-        pwFetchPack(pack).then(async buffer => {
-            await engine.preloadFile(buffer, pack.file);
-            if (options.onProgress) options.onProgress(pack.bytes, pack.bytes);
-        }),
-    ]);
-    pwMark('pack-ready');
-    // startGame would download the pack again. start consumes our preloaded bytes.
-    return engine.start({...options, args: ['--main-pack', pack.file].concat(options.args || config.args || [])});
+    const reportProgress = (current, total) => {
+        if (options.onProgress) options.onProgress(current, total);
+        const amount = (current / 1000000).toFixed(1);
+        const size = total > 0 ? ' of ' + (total / 1000000).toFixed(1) + ' MB' : ' MB';
+        pwLoadingMessage('Downloading game… ' + amount + size);
+    };
+    try {
+        await Promise.all([
+            engine.init(config.executable),
+            pwFetchPack(pack, reportProgress, () => {
+                pwLoadingMessage('Preparing game…');
+                if (options.onProgress) options.onProgress(0, 0);
+            }).then(buffer => engine.preloadFile(buffer, pack.file)),
+        ]);
+        pwMark('pack-ready');
+        pwLoadingMessage('Starting game…');
+        // Let the stage paint before the engine starts its synchronous work.
+        await new Promise(resolve => requestAnimationFrame(() => setTimeout(resolve, 0)));
+        // startGame would download the pack again. start consumes our preloaded bytes.
+        return await engine.start({...options, args: ['--main-pack', pack.file].concat(options.args || config.args || [])});
+    } catch (error) {
+        pwLoadingMessage('');
+        throw error;
+    }
 };
 
-const PW_PACK_CONFIG = {"file": "game-f0d46fa95a0fd28ac10eb084cb19fa51a1231958f4050d857caf42f0269c312b.pck", "gzip": "game-f0d46fa95a0fd28ac10eb084cb19fa51a1231958f4050d857caf42f0269c312b.pck.gz", "sha256": "f0d46fa95a0fd28ac10eb084cb19fa51a1231958f4050d857caf42f0269c312b", "bytes": 97224876};
+const PW_PACK_CONFIG = {"file": "game-ffd1d160adf734c62ce9ada47cb114001a5ad0022c06180a91f35188dda62170.pck", "gzip": "game-ffd1d160adf734c62ce9ada47cb114001a5ad0022c06180a91f35188dda62170.pck.gz", "sha256": "ffd1d160adf734c62ce9ada47cb114001a5ad0022c06180a91f35188dda62170", "bytes": 97225932};
 </script>
 <script src="engine-f5152f7d6acd.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"engine-f5152f7d6acd","experimentalVK":false,"fileSizes":{"game-f0d46fa95a0fd28ac10eb084cb19fa51a1231958f4050d857caf42f0269c312b.pck":97224876,"engine-f5152f7d6acd.wasm":39509339},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4,"mainPack":"game-f0d46fa95a0fd28ac10eb084cb19fa51a1231958f4050d857caf42f0269c312b.pck"};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"engine-f5152f7d6acd","experimentalVK":false,"fileSizes":{"game-ffd1d160adf734c62ce9ada47cb114001a5ad0022c06180a91f35188dda62170.pck":97225932,"engine-f5152f7d6acd.wasm":39509339},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4,"mainPack":"game-ffd1d160adf734c62ce9ada47cb114001a5ad0022c06180a91f35188dda62170.pck"};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
