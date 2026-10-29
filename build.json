@@ -1,14 +1,14 @@
 {
-  "commit": "cb488df57a864fb3ae7dc784ede1142da6bf2c5c",
+  "commit": "a7ebc8cc8ce04d9c1c9b62ccaba989993c94e522",
   "godot": "4.7.stable",
   "hosting": "github-pages",
   "engine": "engine-f5152f7d6acd",
   "engine_patches": [
     "pw-gl-buffer-vao-reuse-v1"
   ],
-  "pck": "game-4b055138d9dbba5ceff45f5b32b1ad43a7c460e37bf108b5909c58a5b717e749.pck",
-  "pck_gzip": "game-4b055138d9dbba5ceff45f5b32b1ad43a7c460e37bf108b5909c58a5b717e749.pck.gz",
-  "pck_sha256": "4b055138d9dbba5ceff45f5b32b1ad43a7c460e37bf108b5909c58a5b717e749",
+  "pck": "game-9fc03f92160bbaf6e5b4c98e6ce806496702188625d403cf29f12f4c350f8650.pck",
+  "pck_gzip": "game-9fc03f92160bbaf6e5b4c98e6ce806496702188625d403cf29f12f4c350f8650.pck.gz",
+  "pck_sha256": "9fc03f92160bbaf6e5b4c98e6ce806496702188625d403cf29f12f4c350f8650",
   "status": "work in progress; campaign approval and phone timing pending",
   "assets": {
     "engine-f5152f7d6acd.wasm": {
@@ -27,13 +27,13 @@
       "bytes": 2973,
       "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
     },
-    "game-4b055138d9dbba5ceff45f5b32b1ad43a7c460e37bf108b5909c58a5b717e749.pck": {
-      "bytes": 95214100,
-      "sha256": "4b055138d9dbba5ceff45f5b32b1ad43a7c460e37bf108b5909c58a5b717e749"
+    "game-9fc03f92160bbaf6e5b4c98e6ce806496702188625d403cf29f12f4c350f8650.pck": {
+      "bytes": 95213560,
+      "sha256": "9fc03f92160bbaf6e5b4c98e6ce806496702188625d403cf29f12f4c350f8650"
     },
-    "game-4b055138d9dbba5ceff45f5b32b1ad43a7c460e37bf108b5909c58a5b717e749.pck.gz": {
-      "bytes": 90714681,
-      "sha256": "76855068a7b82235fbc4a96f551dd7ba71d2e0ace9bd97e77c4c1d99132c39ef"
+    "game-9fc03f92160bbaf6e5b4c98e6ce806496702188625d403cf29f12f4c350f8650.pck.gz": {
+      "bytes": 90713910,
+      "sha256": "3a8ced39bb0909865fdc71fab0b0ee2bf75e3cb497681abfa4ccef3deef28766"
     }
   }
 }
